@@ -4,7 +4,7 @@ import next from "../arrow.png"
 import '../App.css';
 import { useNavigate } from 'react-router-dom';
 export default function Home(props) {
-    let cities = ['Bangalore', 'Kochi', 'Hyderabad', "Chennai", "Dehradun",  "Indore", "Jaipur", "Jodhpur", "Lucknow", "Madurai", "Mumbai", "Varanasi"];
+    let cities = ['Bangalore', 'Kochi', 'Hyderabad', "Chennai", "Dehradun", "Indore", "Jaipur", "Jodhpur", "Lucknow", "Madurai", "Mumbai", "Varanasi"];
     const navigate = useNavigate();
 
 
@@ -33,7 +33,7 @@ export default function Home(props) {
     return (
         <>
             <div className='content'>
-                <div className="des" style={{ margin: "0px 100px", paddingTop: "20px", alignContent: "center", fontSize: "20px" }}>
+                {/* <div className="des" style={{ margin: "0px 100px", paddingTop: "20px", alignContent: "center", fontSize: "20px" }}>
                     The application provides users with real-time and future weather information for a specified location.
                     <br />
                     Current Conditions: The application displays the current weather conditions, including temperature, humidity, wind speed, and direction. It may also provide information on atmospheric pressure and sealevel.
@@ -41,8 +41,8 @@ export default function Home(props) {
 
                     Hourly Forecast: Users can view the weather forecast for the next few hours, including temperature changes and atmospheric details.
                     <br />
-                </div>
-                <div className="desc" style={{ marginLeft: "400px", padding: "20px 0px" }}><h2>Know Weather from Popular cities</h2></div>
+                </div> */}
+                <div className="desc" style={{ marginLeft: "400px", padding: "20px 0px" }}><h2>Popular cities</h2></div>
                 <div className="container" key={cities[0]}>
                     {
                         cities.map(c => {
@@ -53,10 +53,10 @@ export default function Home(props) {
                                 }}
                                 ></img>
                                 <div className='direct' onClick={() => {
-                                        fetchData(c);
-                                    }}>
+                                    fetchData(c);
+                                }}>
                                     <p style={{ paddingLeft: "20px" }} >{c}</p>
-                                    <img src={next} width="20px" height="20px" alt=""/>
+                                    <img src={next} width="20px" height="20px" alt="" />
                                 </div>
                             </div>
                         })

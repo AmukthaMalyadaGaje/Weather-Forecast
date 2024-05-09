@@ -7,7 +7,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import VideoComponent from './components/VideoComponent';
+// import VideoComponent from './components/VideoComponent';
 
 
 function App() {
@@ -15,12 +15,12 @@ function App() {
 
   return (
     <>
-        <VideoComponent/>
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/forecast" element={< Forecast />} />
-        </Routes>
+      {/* <VideoComponent/> */}
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/forecast" element={< Forecast />} />
+      </Routes>
     </>
 
   );
